@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Project Landing Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: #181108;
+			font-size: 130%;
+			font-family: impact;
+		}
+		@media (max-width: 600px) {
+			body {
+				font-size: 90%;
+			}
+		}
+		#header {
+			background-color: #7F7F7F;
+			display: flex;
+			position: fixed;
+			align-items: center;
+			justify-content: space-between;				
+			top: 0;
+			width: 97vw;
+			z-index: 1;
+		}
+		@media (max-width: 750px) {
+			#header {
+				width: 95vw;
+			}
+		}
+		@media (max-width: 600px) {
+			#header {
+				flex-wrap: wrap;
+			}
+		}
+		#header-img {
+			width: 6%;
+			height: auto;
+			margin-left: 20px;
+		}
+		#logo-text {
+			display: inline;
+			padding: 5px;
+		}
+		@media (max-width: 800px) and (min-width: 749px) {
+			#header-img {
+				width: 6%;
+				height: auto;
+			}
+			#logo-text {
+				font-size: 120%;
+			}
+		}
+		@media (max-width: 750px) {
+			#header-img {
+				width: 10%;
+				height: auto;
+			}
+			#logo-text {
+				font-size: 120%;
+				display: inline;
+				padding: 5px;
+			}
+		}
+		@media (max-width: 600px) {
+			#header-img {
+				width: 7%;
+				height: auto;
+				padding-top: 5%;
+			}
+			#logo-text {
+				font-size: 200%;
+				display: inline;
+				padding-top: 10%;
+				padding: 5px;
+			}
+		}
+		#navul {
+			list-style-type: none;
+			display: flex;
+		}
+		.navli {			
+			padding: 10px;
+			margin-right: 20px;
+		}
+		.nav-link {
+			color: #ffd510;
+			text-decoration: none;
+		}
+		.nav-link:visited {
+			color: #ffd510;
+		}
+		.nav-link:hover {
+			color: #000000;
+		}
+		.nav-link:active {
+			color: #000000;
+		}
+		@media (max-width: 800px) and (min-width: 749px) {
+			.nav-link {
+				font-size: 80%;
+			}
+		}
+		@media (max-width: 750px) {
+			.nav-link {
+				font-size: 90%;
+			}
+		}
+		@media (max-width: 600px) {
+			.nav-link {
+				font-size: 110%;
+			}
+		}
+		#main-div {
+			width: 97vw;
+		}
+		@media (max-width: 750px) {
+			#main-div {
+				width: 95vw;
+			}
+		}
+		section {
+			height: 75vh;
+			margin-top: 100px;
+		}
+		.headings {
+			color: #ffd510;
+			position: relative;
+			bottom: 5%;
+			left: 1%;
+		}
+		@media (max-width: 800px) and (min-width: 749px) {
+			.headings {
+				font-size: 80%;
+				bottom: 10%;
+			}
+		}
+		@media (max-width: 600px) {
+			.headings {
+				top: 0;
+			}
+		}
+		#about {
+			background-image: url("https://live.staticflickr.com/5597/15499418055_b32c553dee_b.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 25px;			
+			border: 6px solid rgb(127, 127, 127);
+		}
+		.aboutp {
+			background-color:  rgb(127, 127, 127);
+			background-color: rgb(127, 127, 127, 0.5);
+			font-style: italic;
+			position: relative;
+			text-align: center;
+			width: 25%;
+			left: 10%;
+			border-radius: 5px;
+		}		
+		#alist {
+			background-color:  rgb(127, 127, 127);
+			background-color: rgb(127, 127, 127, 0.5);
+			position: relative;
+			width: 30%;				
+			left: 60%;	
+			border-radius: 5px;
+			
+		}
+		@media (max-width: 800px) and (min-width: 749px) {
+			.aboutp, #alist {
+				font-size: 75%;
+				bottom: 15%;
+			}
+		}
+		@media (max-width: 750px) {
+			.aboutp {
+				width: 30%;
+			}
+		}
+		@media (max-width: 600px) {
+			.aboutp {
+				width: 40%;
+				bottom: 5%;
+				left: 0;
+				margin-top: 20%;
+				margin-bottom: 20%;
+			}
+			#alist {
+				width: 45%;
+				bottom: 5%;
+				left: 55%;
+			}
+		}
+		.ainfo {
+			padding: 10px;
+		}
+		#services, #preview, #bids {
+			background-color: #ce9954;
+			padding: 20px;
+			border: 6px solid rgb(127, 127, 127);
+		}
+		.serviceh {			
+			background-color:  rgb(127, 127, 127);
+			background-color:  rgb(127, 127, 127, 0.60);			
+			text-align: center;
+			width: 20%;
+			margin: 10px;
+			border-radius: 5px;
+		}
+		@media (max-width: 600px) {
+			.serviceh {
+				width: 30%;
+				margin-top: 20%;
+			}
+		}
+		@media (max-width: 800px) and (min-width: 749px) {
+			#service-info {
+				font-size: 80%;
+				position: relative;
+				bottom: 12%;
+			}
+		}
+		#video-div, #form {
+			text-align: center;
+		}
+		@media (max-width: 800px) and (min-width: 749px) {
+			#video {
+				height: 50vh;
+				width: auto;
+			}
+		}
+		@media (max-width: 600px) {
+			#video {
+				width: 75vw;
+				height: auto;
+			}
+			#video-div {
+				position: relative;
+				top: 20%;
+			}
+		}
+		#bidsp {
+			position: relative;
+			text-align: center;
+			bottom: 5%;
+		}		
+		#email {
+			padding: 10px;
+		}
+		#submit {
+			display: block;
+			padding: 5px;
+			margin: 20px auto;
+		}
+		@media (max-width: 800px) and (min-width: 749px) {
+			#bidsp, #email, #submit {
+				font-size: 80%;
+			}
+		}
+		@media (max-width: 600px) {
+			#bidsp {
+				top: 5%;
+			}
+			#email {
+				margin-top: 30px;
+			}
+		}
+	</style>
+	
+</head>
+<body>
+<header id="header">
+<div id="logo-div">
+	<img id="header-img" src="https://cdn.pixabay.com/photo/2012/04/01/19/32/tools-24220__340.png" alt="tool logo">
+	<h1 id="logo-text">Crafted Decks</h1>
+</div>
+<nav id="nav-bar">
+	<ul id="navul">
+		<li class="navli"><a class="nav-link" href="#about">About</a></li>
+		<li class="navli"><a class="nav-link" href="#services">Services</a></li>
+		<li class="navli"><a class="nav-link" href="#preview">Preview</a></li>
+		<li class="navli"><a class="nav-link" href="#bids">Bids</a></li>
+	</ul>
+</nav>
+</header>
+<main id="main-div">
+<section id="about">
+<div class="headings"><h2>About:</h2></div>
+	<div class="aboutp">
+		<p>Expertly crafted outdoor structures</p>
+	</div>
+	<div id="alist">
+	<ul>
+		<li class="ainfo">Choose from a variety of woods and finishings.</li>
+		<li class="ainfo">Free bids.</li>
+		<li class="ainfo">Quality guaranteed!</li>
+	</ul>
+	</div>
+	<div class="aboutp">
+		<p>15+ years of experience</p>
+	</div>
+</section>
+<section id="services">
+<div class="headings"><h2>Services:</h2></div>
+<div id="service-info">
+	<h3 class="serviceh">Decks</h3>
+	<p class="servicep">Adding a Crafted Deck to your house or pool enhances the outdoor space.</p>
+	<h3 class="serviceh">Pergolas</h3>
+	<p class="servicep">Create a lovely, private sanctuary with a pergola in your yard.</p>
+	<h3 class="serviceh">Sunrooms</h3>
+	<p class="servicep">Like to be outside, but don’t actually want to be outside? 
+	A crafted sunroom is the answer for experiencing the outdoors inside. </p>
+</div>
+</section>
+<section id="preview">
+<div class="headings"><h2>Preview:</h2></div>
+<div id="video-div">
+	<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/2kso1mXQhns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</section>
+<section id="bids">
+<div class="headings"><h2>Bids:</h2></div>
+<p id="bidsp">If you would like a bid or more information, please enter your email address. We will contact you with further information.</p>
+	<form id="form" action="https://www.freecodecamp.com/email-submit">
+		<label for="email" id="email-label">Email:</label>
+			<input type="email" name="email" id="email" required placeholder="Enter your email address">
+		<input id="submit" type="submit" value="Submit">
+	</form>
+</section>
+</main>
+</body>
+</html>
